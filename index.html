@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wave Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vodafone-red: #e60000;
+      --dark: #1a1a1a;
+      --light: #ffffff;
+      --gray: #f5f5f5;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--dark);
+      background-color: var(--light);
+    }
+    header {
+      background: var(--vodafone-red);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background: var(--vodafone-red);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .offerta, .servizi, .partner, .contatti {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .servizi-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .servizio {
+      background: var(--gray);
+      padding: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+      border-radius: 8px;
+    }
+    button, .cta {
+      background: var(--vodafone-red);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Poppins', sans-serif;
+    }
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Wave Business">
+    <nav>
+      <a href="#offerta">Offerta</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#partner">Partner</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>FASTWEB + VODAFONE</h1>
+    <p>Insieme, siamo futuro.</p>
+    <a href="#offerta" class="cta">Scopri i nostri servizi</a>
+  </div>
+
+  <section class="offerta" id="offerta">
+    <h2>La nostra Offerta</h2>
+    <p>Consulenza gratuita per soluzioni business su misura in ambito fisso, mobile e digitale.</p>
+    <button onclick="window.location.href='tel:+390000000000'">Chiama un consulente</button>
+  </section>
+
+  <section class="servizi" id="servizi">
+    <h2>I nostri servizi</h2>
+    <div class="servizi-grid">
+      <div class="servizio">
+        <h3>Telefonia Fissa</h3>
+        <p>Soluzioni affidabili per aziende di ogni dimensione.</p>
+      </div>
+      <div class="servizio">
+        <h3>Mobile Business</h3>
+        <p>Piani personalizzati per ogni team e professionista.</p>
+      </div>
+      <div class="servizio">
+        <h3>Trasformazione Digitale</h3>
+        <p>Innovazione e tecnologia per far crescere il tuo business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner" id="partner">
+    <h2>Partner</h2>
+    <p>Lavoriamo con i migliori per offrirti il massimo.</p>
+    <img src="vodafone-fastweb.png" alt="Partner Vodafone e Fastweb" style="max-width: 300px;">
+  </section>
+
+  <section class="contatti" id="contatti">
+    <h2>Contattaci</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="azienda" placeholder="Azienda">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telefono" placeholder="Telefono">
+      <textarea name="messaggio" placeholder="Il tuo messaggio..." rows="4" required></textarea>
+      <button type="submit">Inviaci un messaggio</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Crescita digitale, consulenza reale.</p>
+    <img src="footer-logo.png" alt="Wave Business" style="height: 40px; margin-top: 1rem;">
+  </footer>
+</body>
+  </html>
+  
