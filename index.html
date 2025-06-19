@@ -123,9 +123,31 @@
 <footer class="footer">
   <p>Crescita digitale, consulenza reale.</p>
   <p>Wave Business – info@wavebusiness.it</p>
+  <p>
+    <a href="privacy.html" style="color: #ccc;">Privacy Policy</a> |
+    <a href="cookie.html" style="color: #ccc;">Cookie Policy</a>
+  </p>
   <small>I marchi riportati sono di proprietà dei rispettivi titolari. Wave Business non rappresenta Vodafone ma ne promuove i servizi in qualità di agente commerciale.</small>
 </footer>
+  <script>
+  window.addEventListener("load", function(){
+    if (!localStorage.getItem("cookieConsent")) {
+      let banner = document.createElement("div");
+      banner.innerHTML = `
+        <div style="position:fixed;bottom:0;width:100%;background:#1a1a1a;color:white;padding:1rem;text-align:center;z-index:1000;">
+          Questo sito utilizza cookie per migliorare l'esperienza utente. <a href='cookie.html' style='color:#fff;text-decoration:underline;'>Scopri di più</a>.
+          <button style="margin-left:1rem;background:#e60000;color:white;padding:0.5rem 1rem;border:none;cursor:pointer;" onclick="acceptCookies()">Accetta</button>
+        </div>
+      `;
+      document.body.appendChild(banner);
+    }
+  });
 
+  function acceptCookies() {
+    localStorage.setItem("cookieConsent", true);
+    location.reload();
+  }
+      </script>
 </body>
   </html>
   
