@@ -1,53 +1,352 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEST LANDING</title>
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #000;
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-
-    header {
-      background-color: #ffffff;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #e60000;
-    }
-
-    h1 {
-      color: #e60000;
-      font-size: 2rem;
-    }
-
-    img {
-      height: 50px;
-    }
-
-    section {
-      padding: 2rem;
-      background-color: #f8f8f8;
-      border-bottom: 1px solid #ddd;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodafone Business | Soluzioni Digitali per la Tua Azienda</title>
+    <!-- Tailwind CSS CDN per uno stile moderno e reattivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vodafone: {
+                            red: '#E60000',
+                            blue: '#002B49',
+                            darkBlue: '#001A2C',
+                            accent: '#FF5500', // Arancione di accento per CTA
+                            lightBg: '#F4F6F8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-vodafone-lightBg text-slate-800 font-sans antialiased">
 
-  <header>
-  <h1>Vodafone Business</h1>
-  <img src="vodafone-logo1.png" alt="Logo Vodafone" style="height: 90px;" />
-</header>
+    <!-- HEADER MINIMALE SENZA MENU DI NAVIGAZIONE -->
+    <header class="bg-vodafone-darkBlue py-4 border-b border-slate-700/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Vodafone Placeholder/Icona -->
+                <div class="w-9 h-9 bg-vodafone-red rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <i class="fa-solid fa-signal"></i>
+                </div>
+                <span class="text-white text-xl font-bold tracking-tight">Vodafone <span class="text-slate-400 font-normal">Business</span></span>
+            </div>
+            <a href="#form-section" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition">
+                <i class="fa-solid fa-[#002B49] mr-1"></i> Partner Certificato
+            </a>
+        </div>
+    </header>
 
-  <section>
-    <h2>Benvenuto nella nuova pagina!</h2>
-    <p>Se vedi questo messaggio, tutto funziona. 😊</p>
-  </section>
+    <!-- HERO SECTION (ABOVE THE FOLD) -->
+    <section class="bg-vodafone-darkBlue text-white py-12 lg:py-20 relative overflow-hidden">
+        <!-- SFONDO GRAFICO -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- TESTI HERO (LEFT) -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Analisi di Connettività e Digitale 2026
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Connettività e Soluzioni Digitali per far <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">crescere la tua azienda</span>
+                </h1>
+                
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                    Riduci i costi operativi fino al 30% e metti in sicurezza la tua infrastruttura IT con le soluzioni su misura di Vodafone Business.
+                </p>
+
+                <!-- PROVA SOCIALE RAPIDA HERO -->
+                <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-400 border-t border-slate-800">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                        <span>Sicurezza Enterprise</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-[#FF5500] text-emerald-400"></i>
+                        <span>Supporto Dedicato 24/7</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-emerald-400"></i>
+                        <span>+15.000 Aziende Servite</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM IN 2 STEP (PROGRESSIVE DISCLOSURE) -->
+            <div id="form-section" class="lg:col-span-5">
+                <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-800 border border-slate-200">
+                    
+                    <div class="mb-6">
+                        <h2 class="text-xl font-bold text-vodafone-blue">Richiedi l'Analisi Gratuita</h2>
+                        <p class="text-xs text-slate-500 mt-1">Valutazione personalizzata senza alcun impegno</p>
+                    </div>
+
+                    <!-- STEP INDICATOR -->
+                    <div class="flex items-center mb-6">
+                        <div id="step-1-indicator" class="flex-1 text-center pb-2 border-b-2 border-vodafone-red text-vodafone-red font-bold text-xs">
+                            1. Esigenza Aziendale
+                        </div>
+                        <div id="step-2-indicator" class="flex-1 text-center pb-2 border-b-2 border-slate-200 text-slate-400 font-bold text-xs">
+                            2. Dati di Contatto
+                        </div>
+                    </div>
+
+                    <!-- FORM COMPONENT -->
+                    <form id="lead-form" onsubmit="handleFormSubmit(event)">
+                        
+                        <!-- STEP 1 -->
+                        <div id="step-1" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Qual è la priorità della tua azienda?</label>
+                                <select id="esigenza" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                                    <option value="">Seleziona un'opzione...</option>
+                                    <option value="connettivita">Ottimizzazione Connettività (Fibra / 5G)</option>
+                                    <option value="sicurezza">Cybersecurity e Protezione Dati</option>
+                                    <option value="cloud">Soluzioni Cloud e Smart Working</option>
+                                    <option value="costi">Riduzione Canoni e Costi IT</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Dimensione Aziendale</label>
+                                <select id="dipendenti" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                                    <option value="">Numero di dipendenti/collaboratori...</option>
+                                    <option value="1-10">1 - 10 Dipendenti</option>
+                                    <option value="11-50">11 - 50 Dipendenti</option>
+                                    <option value="51-250">51 - 250 Dipendenti</option>
+                                    <option value="250+">Oltre 250 Dipendenti</option>
+                                </select>
+                            </div>
+
+                            <button type="button" onclick="nextStep()" class="w-full py-3.5 px-6 rounded-lg bg-vodafone-accent hover:bg-orange-600 text-white font-bold text-sm shadow-md transition transform active:scale-95 flex items-center justify-center gap-2">
+                                Continua al prossimo step <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- STEP 2 -->
+                        <div id="step-2" class="space-y-4 hidden">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nome e Cognome</label>
+                                <input type="text" id="nome" placeholder="Mario Rossi" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nome Azienda</label>
+                                <input type="text" id="azienda" placeholder="Azienda Srl" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email Aziendale</label>
+                                <input type="email" id="email" placeholder="mario.rossi@azienda.it" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Telefono per Contatto</label>
+                                <input type="tel" id="telefono" placeholder="+39 333 1234567" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 focus:ring-2 focus:ring-vodafone-red text-sm outline-none">
+                            </div>
+
+                            <div class="flex items-center justify-between gap-2">
+                                <button type="button" onclick="prevStep()" class="py-3 px-4 text-xs font-bold text-slate-500 hover:text-slate-800">
+                                    <i class="fa-solid fa-arrow-left"></i> Indietro
+                                </button>
+                                <button type="submit" class="flex-1 py-3.5 px-4 rounded-lg bg-vodafone-accent hover:bg-orange-600 text-white font-bold text-sm shadow-md transition transform active:scale-95 text-center">
+                                    Richiedi la tua analisi gratuita
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <!-- MICRO COPY RASSICURANTE -->
+                    <div class="mt-4 text-center border-t border-slate-100 pt-3">
+                        <p class="text-[11px] text-slate-500 flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-lock text-slate-400"></i> Un nostro consulente dedicato ti ricontatterà entro 24 ore lavorative.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOGHI CLIENTI E PROVA SOCIALE -->
+    <section class="py-8 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Scelto dalle principali aziende sul territorio</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition">
+                <span class="font-bold text-xl text-slate-600">LOGISTICA 24</span>
+                <span class="font-bold text-xl text-slate-600">TECH-GROUP</span>
+                <span class="font-bold text-xl text-slate-600">INDUSTRIA ITALIA</span>
+                <span class="font-bold text-xl text-slate-600">SMART RETAIL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE CASI STUDIO (GRIGLIA ASIMMETRICA 60/40) -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-vodafone-darkBlue">Risultati concreti per i nostri partner</h2>
+                <p class="text-slate-600 text-sm mt-2">Come abbiamo aiutato altre realtà aziendali ad ottimizzare i processi e tagliare i costi.</p>
+            </div>
+
+            <!-- GRIGLIA ASIMMETRICA 60/40 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-2xl p-6 lg:p-10 shadow-sm border border-slate-200">
+                
+                <!-- COLONNA LARGA (60% / col-span-7): VISUAL & METRICHE -->
+                <div class="lg:col-span-7 bg-vodafone-darkBlue rounded-xl p-8 text-white relative overflow-hidden">
+                    <div class="grid grid-cols-2 gap-6 relative z-10">
+                        <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-black text-emerald-400">-30%</span>
+                            <span class="text-xs text-slate-300 mt-1 block">Riduzione costi di connettività</span>
+                        </div>
+                        <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-black text-blue-400">99.9%</span>
+                            <span class="text-xs text-slate-300 mt-1 block">Uptime di rete garantito</span>
+                        </div>
+                        <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-black text-amber-400">24/7</span>
+                            <span class="text-xs text-slate-300 mt-1 block">Assistenza tecnica prioritaria</span>
+                        </div>
+                        <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-black text-purple-400">Zero</span>
+                            <span class="text-xs text-slate-300 mt-1 block">Interruzioni nella migrazione</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA STRETTA (40% / col-span-5): TESTO NARRATIVO -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-bold text-vodafone-red uppercase tracking-wider">Caso di Successo</span>
+                    <h3 class="text-xl font-bold text-slate-900">Ottimizzazione Rete & Cloud per la Filiera Produttiva</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        "L'integrazione della fibra avanzata e della protezione Cyber di Vodafone Business ci ha permesso di connettere 5 sedi operative senza rallentamenti, riducendo le spese fisse mensili."
+                    </p>
+                    <div class="pt-2 border-t border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-slate-700">
+                            RM
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-800">Roberto Mancini</p>
+                            <p class="text-[11px] text-slate-500">IT Director, Logistica Italia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LEAD MAGNET SECONDARIO (REPORT SCARICABILE) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-slate-900 to-vodafone-darkBlue rounded-2xl p-6 sm:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-400/30">Risorsa per Manager & IT</span>
+                    <h3 class="text-2xl font-bold">Scarica il Report Benchmark Connettività 2026</h3>
+                    <p class="text-sm text-slate-300 max-w-lg">Non sei ancora pronto per una consulenza? Scopri le metriche e le tendenze di costo per la connettività aziendale in Italia.</p>
+                </div>
+                <div class="w-full md:w-auto">
+                    <a href="#form-section" class="block w-full md:w-auto px-6 py-3.5 bg-white text-vodafone-darkBlue hover:bg-slate-100 font-bold text-sm rounded-lg text-center transition">
+                        Scarica la Guida in PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (RISPOSTA ALLE OBIEZIONI) -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-extrabold text-vodafone-darkBlue text-center mb-8">Domande Frequenti</h2>
+            
+            <div class="space-y-4">
+                <details class="bg-white p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-sm text-slate-800">Cosa comporta l'analisi gratuita iniziale?</summary>
+                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">Un nostro esperto analizzerà le tue attuali fatture di connettività ed esigenze IT per proporti una soluzione personalizzata con stima dei risparmi e dei tempi di attivazione, senza alcun vincolo.</p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-sm text-slate-800">Ci saranno interruzioni del servizio durante il passaggio?</summary>
+                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">No. Gestiamo le migrazioni garantendo la continuità operativa senza disconnessioni per la tua azienda.</p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-sm text-slate-800">Le soluzioni sono adatte anche a piccole imprese?</summary>
+                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">Sì, strutturiamo piani flessibili scalabili sia per piccole realtà (1-10 collaboratori) che per grandi infrastrutture enterprise.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-vodafone-darkBlue text-slate-400 py-8 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p>© 2026 Vodafone Business Partner. Tutti i diritti riservati.</p>
+            <p class="text-slate-500">I marchi e i loghi appartengono ai rispettivi proprietari. Informativa Privacy compliant con il GDPR.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT PER INTERATTIVITÀ E STEP FORM -->
+    <script>
+        function nextStep() {
+            const esigenza = document.getElementById('esigenza').value;
+            const dipendenti = document.getElementById('dipendenti').value;
+
+            if (!esigenza || !dipendenti) {
+                alert('Per favore seleziona tutte le opzioni per proseguire.');
+                return;
+            }
+
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.remove('hidden');
+
+            document.getElementById('step-1-indicator').className = "flex-1 text-center pb-2 border-b-2 border-slate-200 text-slate-400 font-bold text-xs";
+            document.getElementById('step-2-indicator').className = "flex-1 text-center pb-2 border-b-2 border-vodafone-red text-vodafone-red font-bold text-xs";
+        }
+
+        function prevStep() {
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-1').classList.remove('hidden');
+
+            document.getElementById('step-1-indicator').className = "flex-1 text-center pb-2 border-b-2 border-vodafone-red text-vodafone-red font-bold text-xs";
+            document.getElementById('step-2-indicator').className = "flex-1 text-center pb-2 border-b-2 border-slate-200 text-slate-400 font-bold text-xs";
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Messaggio di conferma post-invio
+            const formContainer = document.getElementById('form-section');
+            formContainer.innerHTML = `
+                <div class="glass-card rounded-2xl p-8 text-center text-slate-800 border border-slate-200">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-vodafone-blue">Richiesta Inviata con Successo!</h3>
+                    <p class="text-xs text-slate-600 mt-2">Grazie per averci contattato. Un nostro consulente Vodafone Business prenderà in carico la tua richiesta ed entro 24 ore riceverai l'analisi della tua connettività.</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
